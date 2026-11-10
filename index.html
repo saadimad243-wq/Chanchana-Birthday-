@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aina ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg, #190c29, #54234c, #a34b70);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  color: #ffd5e5;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #ffd5e5;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+button {
+  background: #ff8fb8;
+  border: none;
+  color: #32152c;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #ffd5e5;
+}
+
+.hidden {
+  display: none;
+}
+
+.cake {
+  font-size: 100px;
+  margin: 20px;
+}
+
+.heart {
+  font-size: 30px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.card {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 25px;
+  padding: 30px;
+  max-width: 650px;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<section id="welcome">
+  <div class="heart">💗 ✨ 💗</div>
+  <h1>Hey Aina!</h1>
+  <p>Someone has prepared a little surprise for you.</p>
+  <button onclick="showSection('birthday')">
+    Open Your Surprise 🎁
+  </button>
+</section>
+
+<section id="birthday" class="hidden">
+  <h1>Happy Birthday Aina! 🎂</h1>
+  <div class="cake">🎂</div>
+  <p>Today is all about you. May your day be filled with happiness, laughter and beautiful moments.</p>
+  <button onclick="showSection('letter')">
+    A Little Letter 💌
+  </button>
+</section>
+
+<section id="letter" class="hidden">
+  <div class="card">
+    <h2>Dear Aina ❤️</h2>
+    <p>
+      Some people make ordinary moments feel special,
+      and today is a reminder that you deserve all the
+      happiness life has to offer.
+      <br><br>
+      May every new chapter bring you beautiful memories,
+      endless smiles and reasons to be grateful.
+      <br><br>
+      Keep being the wonderful person you are.
+      You deserve the very best.
+    </p>
+    <button onclick="showSection('final')">
+      One Last Surprise ✨
+    </button>
+  </div>
+</section>
+
+<section id="final" class="hidden">
+  <div class="heart">💖 🌸 💖</div>
+  <h1>Stay Wonderful, Aina!</h1>
+  <p>May your wishes turn into reality and your brightest days always be ahead of you.</p>
+  <h2>Happy Birthday Once Again! 🎀</h2>
+  <button onclick="showSection('welcome')">
+    Relive the Surprise ↻
+  </button>
+</section>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll("section").forEach(section => {
+    section.classList.add("hidden");
+  });
+
+  document.getElementById(id).classList.remove("hidden");
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
